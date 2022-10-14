@@ -1,0 +1,7 @@
+require_relative 'generator/basic_emojis'
+require_relative 'generator/keycaps'
+require_relative 'generator/flags'
+require_relative 'generator/tags'
+require_relative 'generator/modifiers'
+require_relative 'generator/skin_tones'
+require_relative 'generator/zwj_sequences'
