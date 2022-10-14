@@ -4,10 +4,10 @@
 
 ## はじめに
 
-Unicodeには様々な絵文字の表現方法がある。
+Unicodeには様々な絵文字の記述方法がある。
 
 * 基本(単独)絵文字
-* Keycap(キーボード文字)
+* 文字キー
 * 国旗・地域旗
 * 修飾子(肌の色)
 * ゼロ幅接合子シーケンス
@@ -18,7 +18,7 @@ Unicodeには様々な絵文字の表現方法がある。
 
 ### テストデータ
 
-Unicodeでは表示確認用に次のテストデータを用意している。HTML版とテキスト版の2種類がある。
+Unicodeではこのためのテストデータを用意しており、ターゲット環境上で表示させてUnicode仕様にどれだけ準拠しているか確認することができる。HTML版とテキスト版の2種類がある。
 
 * HTML: https://www.unicode.org/emoji/charts/emoji-style.html
 * テキスト: https://www.unicode.org/emoji/charts/emoji-style.txt
@@ -33,38 +33,40 @@ Web用などの文書作成にMarkdownが幅広く用いられるようになっ
 
 Unicodeの単一文字で絵文字を表現する場合には2種類ある。
 
-* 絵文字専用コード(例: U+1F9F2 MAGNET → 🧲︎)
-* テキスト・絵文字共有コード(例: U+26BE BASEBALL → ⚾︎, ⚾️)
+* 絵文字専用コード(例: U+1F9F2 → &#x1F9F2;)
+* テキスト・絵文字共有コード(例: U+2601 → &#x2601;&#xFE0E;, &#x2601;&#xFE0F;)
 
 同じ文字コードがテキスト・絵文字両方の表現を持つ場合、その選択にVS15(U+FE0E)またはVS16(U+FE0F)を用いる。これらはVariation selectorと呼ばれ、表現が複数ある文字に対して用いられる。
 
 https://en.wikipedia.org/wiki/Variation_Selectors_(Unicode_block)
 
-対象文字コードに続けてVS15またはVS16を追加することにより表現を指定する。なおどちらか片方しか表現がない文字に対しては単に無視される。以下に実例を示す。U+0041はテキストのみ、U+1F9F2は絵文字のみの例。またU+00A9とU+26BEは両方の表現が可能で、VS15/VS16により表示を選択できる。
+対象文字コードに続けてVS15またはVS16を追加することにより表現を指定する。どちらか片方しか表現がない文字に対しては単に無視される。以下に実例を示す。U+0041はテキストのみ、U+1F9F2は絵文字のみの例。またU+00A9とU+2601は両方の表現が可能で、VS15/VS16により表示を選択する。
 
 | 文字 | デフォルト | VS15あり | VS16あり |
 | :-: | :-: | :-: | :-: |
 | U+0041 | `&#x0041;`<br>&#x0041; | `&#x0041;&#xFE0E;`<br>&#x0041;&#xFE0E; | `&#x0041;&#xFE0F;`<br>&#x0041;&#xFE0F; |
 | U+00A9 | `&#x00A9;`<br>&#x00A9; | `&#x00A9;&#xFE0E;`<br>&#x00A9;&#xFE0E; | `&#x00A9;&#xFE0F;`<br>&#x00A9;&#xFE0F; |
-| U+26BE | `&#x26BE;`<br>&#x26BE; | `&#x26BE;&#xFE0E;`<br>&#x26BE;&#xFE0E; | `&#x26BE;&#xFE0F;`<br>&#x26BE;&#xFE0F; |
+| U+2601 | `&#x2601;`<br>&#x2601; | `&#x2601;&#xFE0E;`<br>&#x2601;&#xFE0E; | `&#x2601;&#xFE0F;`<br>&#x2601;&#xFE0F; |
 | U+1F9F2 | `&#x1F9F2;`<br>&#x1F9F2; | `&#x1F9F2;&#xFE0E;`<br>&#x1F9F2;&#xFE0E; | `&#x1F9F2;&#xFE0F;`<br>&#x1F9F2;&#xFE0F; |
 
 ただしデフォルト(VS15/16なし)の場合にどちらを表示するかはその表示環境により一般に異なる。またサポート上の理由で一方しか表示できなかったり、あるいは未対応で表示できない場合もある。
 
-> 公式仕様データの[emoji-sequences.txt]で`type_field`が`Basic_Emoji`のものが単独絵文字で、先頭のコード表示が`FE0F`とのシーケンスになっているものはデフォルトがテキスト、そうでないものはデフォルトが絵文字。ただしこれに厳密に従っている表示環境はまずない。
+> 公式仕様では[emoji-sequences.txt]で`type_field`が`Basic_Emoji`のものが単独絵文字で、先頭のコード表示が`FE0F`とのシーケンスになっているものはデフォルトがテキスト、そうでないものはデフォルトが絵文字。ただしこれに厳密に従っている表示環境はまずない。
 
-そこで表示テスト用の一覧表を作成した。
+Markdownの表示テスト用の一覧表を作成した。
 
 → [基本絵文字(シーケンスを除く)](ja/basic-emojis.md)
 
 表には公式仕様で単独絵文字表現を持つ文字コードが16個単位で書かれている(絵文字を持たないコード領域は除外)。セル内には文字コードの表現が次の4行で入力されている。
 
-* コーススパン内に文字コードを直接入力
+* コーススパン内に文字コードを入力
 * デフォルト(VS15,16なし)
 * テキスト指定(VS15付き)
 * 絵文字指定(VS16付き)
 
-また各文字にポインタをかざすとポップアップで文字コードとUnicodeでの文字名、仕様書のバージョンを表示する。
+また各文字の上にマウスカーソルを置くとポップアップで文字コードとUnicodeでの文字名、採用時の仕様書バージョンを表示する。
+
+> GitHub Markdownの仕様は全体的に絵文字優先でUnicodeとかなり異なる。例えばU+2194`↔`はUnicode標準ではテキストがデフォルトだが、GitHub Markdownは絵文字がデフォルト。またU+26BD`⚽`は本来は両方の表現が可能だが、GitHub MarkdownではVS15が効かずコードスパンの場合だけテキスト表現になる。
 
 ## [文字キー](ja/keycaps.md)
 
@@ -78,7 +80,7 @@ UnicodeにはCOMBINING ENCLOSING KEYCAP(U+20E3, `⃣`)という文字コード�
 
 ## [国旗・地域旗](ja/flags.md)
 
-絵文字では国や地域の旗はREGIONAL INDICATOR SYMBOL LETTER(U+1F1E6..U+1F1FF) 2文字の組み合わせで表現する。
+Unicode絵文字では国や地域の旗はREGIONAL INDICATOR SYMBOL LETTER(U+1F1E6..U+1F1FF) 2文字の組み合わせで表現する。
 
 → [国旗・地域旗](ja/flags.md)
 
@@ -124,13 +126,22 @@ https://en.wikipedia.org/wiki/Emoji#Skin_color
 
 発色の違いによる表示比較サンプルは次を参照。
 
-→ [肌の色](ja/skine-tones.md)
+→ [肌の色](ja/skin-tones.md)
 
 ## [ゼロ幅接合子シーケンス](ja/zwj-sequences.md)
 
-ゼロ幅接合子(ZERO WIDTH JOINER U+200D)を用いて複数の絵文字コードを合成して表現する。Unicode絵文字で可能な組み合わせは[emoji-zwj-sequences.txt](https://www.unicode.org/Public/emoji/latest/emoji-zwj-sequences.txt)に記述されている。一覧は次の通り。
+ゼロ幅接合子(ZERO WIDTH JOINER U+200D)を用いて複数の絵文字コードを合成して表現する。Unicode絵文字で可能な組み合わせは[emoji-zwj-sequences.txt]に記述されている。全てのリストとその表示サンプルは次の通り。
 
 → [ゼロ幅接合子シーケンス](ja/zwj-sequences.md)
+
+## 表の生成
+
+一覧表はRubyを用いて自動生成しており、最新版は次のようにして生成できる。Unicodeサイトから最新データを取得して全ての表を更新する。
+
+```
+$ cd src
+$ ruby generate-all.rb
+```
 
 ## リファレンス
 
@@ -138,5 +149,5 @@ Unicode® Emoji: https://unicode.org/emoji/techindex.html
 
 Unicode® Technical Standard #51: https://unicode.org/reports/tr51/
 
-
 [emoji-sequences.txt]: https://www.unicode.org/Public/emoji/latest/emoji-sequences.txt
+[emoji-zwj-sequences.txt]: https://www.unicode.org/Public/emoji/latest/emoji-zwj-sequences.txt
