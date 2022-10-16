@@ -4,13 +4,14 @@ module MarkdownEmojiTest
   module Generator
     module Keycaps
       TITLE = {
-        :en => 'Markdown emoji test: Keycaps',
-        :ja => 'Markdown絵文字テスト: 文字キー',
+        :en => 'Markdown emoji prsentation test: Keycaps',
+        :ja => 'Markdown絵文字表示テスト: 文字キー',
       }
       HEADER = {
         :en => '| Sequence | Output | Name | Version |',
         :ja => '| シーケンス | 出力 | 名前 | バージョン |',
       }
+      SUFFIXES = [[0x20E3], [0xFE0E, 0x20E3], [0xFE0F, 0x20E3]]
 
       module_function
       def generate(f, lang)
@@ -20,7 +21,16 @@ module MarkdownEmojiTest
         f.puts '| - | - | - | - |'
         for item in Unicode::Emoji::Keycap::get_list
           seq, name, ver = item
-          f.puts "| #{seq.map {|c| sprintf "%04X", c }.join(' ') } | #{seq.map {|c| c.chr(Encoding::UTF_8) }.join('') } | #{name} | #{ver} |"
+          seqs = SUFFIXES.map {|suffix| [seq[0]] + suffix }
+          f.puts "| #{
+            seqs.map {|seq|
+              seq.map {|c| sprintf "%04X", c }.join(' ')
+            }.join '<br>'
+          } | #{
+            seqs.map {|seq|
+              seq.map {|c| c.chr(Encoding::UTF_8) }.join('')
+            }.join '<br>'
+          } | #{name} | #{ver} |"
         end
       end
 

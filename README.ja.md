@@ -1,4 +1,4 @@
-# Markdown絵文字テスト
+# Markdown絵文字表示テスト
 
 [English](README.md) | 日本語
 
@@ -18,18 +18,23 @@ Unicodeには様々な絵文字の記述方法がある。
 
 ### テストデータ
 
-Unicodeではこのためのテストデータを用意しており、ターゲット環境上で表示させてUnicode仕様にどれだけ準拠しているか確認することができる。HTML版とテキスト版の2種類がある。
+Unicodeではこのためのテストデータを用意しており、ターゲット環境上で表示させてUnicode仕様にどれだけ準拠しているか確認することができる。HTML版とテキスト版の2種類がある。データの意味は冒頭部の説明文に書かれている。
 
 * HTML: https://www.unicode.org/emoji/charts/emoji-style.html
+    * [テキスト出力(VS15)指定](https://www.unicode.org/emoji/charts/emoji-style.html#text+ts_plain)
+    * [文字コードのみ(どちらを表示するか環境依存)](https://www.unicode.org/emoji/charts/emoji-style.html#text-vs_plain)
+    * [絵文字出力(VS16)指定](https://www.unicode.org/emoji/charts/emoji-style.html#text+es_plain)
+    * [絵文字のみ](https://www.unicode.org/emoji/charts/emoji-style.html#emoji_cps_plain)
+    * [旗](https://www.unicode.org/emoji/charts/emoji-style.html#emoji_reg/tags_plain)
+    * [修飾子(肌の色)](https://www.unicode.org/emoji/charts/emoji-style.html#modifier_plain)
+    * [セロ幅接合子シーケンス](https://www.unicode.org/emoji/charts/emoji-style.html#zwj_emoji_plain)
 * テキスト: https://www.unicode.org/emoji/charts/emoji-style.txt
-
-> データの意味は冒頭部の説明文に書かれている。
 
 ### 目的
 
 Web用などの文書作成にMarkdownが幅広く用いられるようになったが、Unicodeでは絵文字テストデータのMarkdown版は用意されていない。そこで今回Markdown版を一式作成した。
 
-## [基本絵文字(シーケンスを除く)](ja/basic-emojis.md)
+## [基本(単独)絵文字](ja/basic-emojis.md)
 
 Unicodeの単一文字で絵文字を表現する場合には2種類ある。
 
@@ -40,7 +45,7 @@ Unicodeの単一文字で絵文字を表現する場合には2種類ある。
 
 https://en.wikipedia.org/wiki/Variation_Selectors_(Unicode_block)
 
-対象文字コードに続けてVS15またはVS16を追加することにより表現を指定する。どちらか片方しか表現がない文字に対しては単に無視される。以下に実例を示す。U+0041はテキストのみ、U+1F9F2は絵文字のみの例。またU+00A9とU+2601は両方の表現が可能で、VS15/VS16により表示を選択する。
+対象文字コードの後にVS15(テキスト指定)またはVS16(絵文字指定)を追加して表現を指定する。また無効な文字に対しては単に無視される。以下に実例を示す。U+0041はテキストのみ、U+1F9F2は絵文字のみの例。またU+00A9とU+2601は両方の表現が可能で、VS15/VS16で表示を選択する。
 
 | 文字 | デフォルト | VS15あり | VS16あり |
 | :-: | :-: | :-: | :-: |
@@ -49,17 +54,17 @@ https://en.wikipedia.org/wiki/Variation_Selectors_(Unicode_block)
 | U+2601 | `&#x2601;`<br>&#x2601; | `&#x2601;&#xFE0E;`<br>&#x2601;&#xFE0E; | `&#x2601;&#xFE0F;`<br>&#x2601;&#xFE0F; |
 | U+1F9F2 | `&#x1F9F2;`<br>&#x1F9F2; | `&#x1F9F2;&#xFE0E;`<br>&#x1F9F2;&#xFE0E; | `&#x1F9F2;&#xFE0F;`<br>&#x1F9F2;&#xFE0F; |
 
-ただしデフォルト(VS15/16なし)の場合にどちらを表示するかはその表示環境により一般に異なる。またサポート上の理由で一方しか表示できなかったり、あるいは未対応で表示できない場合もある。
+なおデフォルト(VS15/16なし)の場合にどちらが選択されるかは表示環境により一般に異なる。またサポート上の理由で一方しか表示できなかったり、あるいは未対応で表示できない場合もある。
 
-> 公式仕様では[emoji-sequences.txt]で`type_field`が`Basic_Emoji`のものが単独絵文字で、先頭のコード表示が`FE0F`とのシーケンスになっているものはデフォルトがテキスト、そうでないものはデフォルトが絵文字。ただしこれに厳密に従っている表示環境はまずない。
+> 公式仕様では[emoji-sequences.txt]の`type_field`が`Basic_Emoji`の場合が単独絵文字で、コード表示が`FE0F`とのシーケンスの場合はテキスト、単独の場合は絵文字がデフォルト。ただし厳密なものではなく、上記テストデータにはVS15/16なしの場合は環境依存(may vary by platform)と書かれている。
 
-Markdownの表示テスト用の一覧表を作成した。
+Markdownの表示テスト用一覧表は次の通り。
 
-→ [基本絵文字(シーケンスを除く)](ja/basic-emojis.md)
+→ [基本(単独)絵文字](ja/basic-emojis.md)
 
-表には公式仕様で単独絵文字表現を持つ文字コードが16個単位で書かれている(絵文字を持たないコード領域は除外)。セル内には文字コードの表現が次の4行で入力されている。
+表には公式仕様で単独絵文字表現を持つ文字コードが16単位で書かれている(絵文字を持たないコード領域は除外)。セル内には文字コードの表現が次の4行で入力されている。
 
-* コーススパン内に文字コードを入力
+* コーススパン内に文字入力
 * デフォルト(VS15,16なし)
 * テキスト指定(VS15付き)
 * 絵文字指定(VS16付き)
@@ -70,13 +75,9 @@ Markdownの表示テスト用の一覧表を作成した。
 
 ## [文字キー](ja/keycaps.md)
 
-UnicodeにはCOMBINING ENCLOSING KEYCAP(U+20E3, `⃣`)という文字コードがあり、他の文字と組み合わせてキーボードなどボタン上に書かれた文字を表現するのに用いられる(例: `A&#x20E3;` → A&#x20E3;)。
-
-この文字を用いた組み合わせ表現の中で、`#`,` * `,`0`..`9`に対してだけ絵文字表現が存在する。一覧は次の表の通り。「文字 VS16 U+20E3」のシーケンスで表現する。
+UnicodeにはCOMBINING ENCLOSING KEYCAP(U+20E3, `⃣`)という文字コードがあり、他の文字と組み合わせてキーボードなどボタン上に書かれた文字を表現するのに用いられる。この中で電話のダイヤルボタンに用いられるキー(`#`,` * `,`0`..`9`)にだけ絵文字表現が存在する。
 
 → [文字キー](ja/keycaps.md)
-
-> 携帯電話のダイヤルボタンに由来する。そのため他の文字に対しては絵文字表現がない。
 
 ## [国旗・地域旗](ja/flags.md)
 
@@ -88,7 +89,7 @@ Unicode絵文字では国や地域の旗はREGIONAL INDICATOR SYMBOL LETTER(U+1F
 
 ## [タグ(国・地域内部の旗)](ja/tags.md)
 
-国や地域のさらに内部の区域を表す旗にはTagと呼ばれる専用文字によるシーケンスが用いられる。Tagに関しては次の英語版Wikipediaが詳しい。
+国や地域のさらに内部の区域を表す旗にはタグと呼ばれる専用文字によるシーケンスが用いられる。タグに関しては次の英語版Wikipediaが詳しい。
 
 https://en.wikipedia.org/wiki/Tags_(Unicode_block)
 
@@ -120,7 +121,7 @@ https://en.wikipedia.org/wiki/Emoji#Skin_color
 | 5 | 👍&#x1F3FE; | 🦶&#x1F3FE; | 🧑&#x1F3FE; |
 | 6 | 👍&#x1F3FF; | 🦶&#x1F3FF; | 🧑&#x1F3FF; |
 
-適用可能な全ての絵文字とそのシーケンスは次の通り(人体に無関係な絵文字には効果がないため除外)。
+適用可能な全ての絵文字及びシーケンスは次の通り(人体に無関係な絵文字には効果がないため除外)。
 
 → [修飾子](ja/modifiers.md)
 
@@ -130,13 +131,13 @@ https://en.wikipedia.org/wiki/Emoji#Skin_color
 
 ## [ゼロ幅接合子シーケンス](ja/zwj-sequences.md)
 
-ゼロ幅接合子(ZERO WIDTH JOINER U+200D)を用いて複数の絵文字コードを合成して表現する。Unicode絵文字で可能な組み合わせは[emoji-zwj-sequences.txt]に記述されている。全てのリストとその表示サンプルは次の通り。
+ゼロ幅接合子(ZERO WIDTH JOINER U+200D)を用いて複数の絵文字コードを合成して表現する。Unicode絵文字で可能な組み合わせは[emoji-zwj-sequences.txt]に記述されている。全リストとその表示サンプルは次の通り。
 
 → [ゼロ幅接合子シーケンス](ja/zwj-sequences.md)
 
 ## 表の生成
 
-一覧表はRubyを用いて自動生成しており、最新版は次のようにして生成できる。Unicodeサイトから最新データを取得して全ての表を更新する。
+一覧表はRubyを用いて自動生成しており、最新版は次のように生成できる。Unicodeサイトから最新データを取得して全ての表を更新する。
 
 ```
 $ cd src

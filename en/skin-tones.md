@@ -1,4 +1,4 @@
-# Markdown emoji test: Skin tones
+# Markdown emoji presentation test: Skin tones
 
 | Code | None | 1-2 | 3 | 4 | 5 | 6 | Name | Version |
 | - | - | - | - | - | - | - | - | - |

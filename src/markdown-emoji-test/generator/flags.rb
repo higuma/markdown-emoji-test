@@ -4,8 +4,8 @@ module MarkdownEmojiTest
   module Generator
     module Flags
       TITLE = {
-        :en => 'Markdown emoji test: Flags',
-        :ja => 'Markdown絵文字テスト: 国旗・地域旗'
+        :en => 'Markdown emoji presentation test: Flags',
+        :ja => 'Markdown絵文字表示テスト: 国旗・地域旗'
       }
       HEADER = {
         :en => '| Sequence | Output | Name | Version |',

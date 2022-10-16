@@ -7,8 +7,8 @@ module MarkdownEmojiTest
       VS16 = ?\uFE0F
 
       TITLE = {
-        :en => 'Markdown emoji test: Basic emojis (without sequences)',
-        :ja => 'Markdown絵文字テスト: 基本絵文字(シーケンスを除く)',
+        :en => 'Markdown emoji presentation test: Basic (stand-alone) emojis',
+        :ja => 'Markdown絵文字表示テスト: 基本(単独)絵文字',
       }
       EXAMPLE = {
         :en => "`c`: as code span, &nbsp; **c**: character only, &nbsp; **15**: character + VS15(U+FE0E), &nbsp; **16**: character + VS16(U+FE0F)",
@@ -50,9 +50,9 @@ module MarkdownEmojiTest
             c = code.chr(Encoding::UTF_8)
             name = @@emoji_map.name code
             ver = @@emoji_map.version code
-            f.print " <span title=\"U+#{hex} #{name}, #{ver}\">`#{c}`<br>#{c}<br>#{c}#{VS15}<br>#{c}#{VS16}</span> |"
+            f.print " <span title=\"U+#{hex} #{name}, #{ver}\">`#{c}`</span><br><span title=\"#{hex}\">#{c}</span><br><span title=\"#{hex} FE0E\">#{c}#{VS15}</span><br><span title=\"#{hex} FE0F\">#{c}#{VS16}</span> |"
           else
-            f.print " <span title=\"U+#{hex} (text only)\">-</span> |"
+            f.print " <span title=\"U+#{hex} (not an emoji)\">-</span> |"
           end
         end
         f.puts

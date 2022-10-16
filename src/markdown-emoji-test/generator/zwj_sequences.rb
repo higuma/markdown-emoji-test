@@ -4,8 +4,8 @@ module MarkdownEmojiTest
   module Generator
     module ZwjSequences
       TITLE = {
-        :en => 'Markdown emoji test: Zero width joiner sequences',
-        :ja => 'Markdown絵文字テスト: ゼロ幅接合子シーケンス'
+        :en => 'Markdown emoji presentation test: Zero width joiner sequences',
+        :ja => 'Markdown絵文字表示テスト: ゼロ幅接合子シーケンス'
       }
       HEADER = {
         :en => '| Sequence | Output | Name | Version |',

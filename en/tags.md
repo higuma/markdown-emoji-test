@@ -1,4 +1,4 @@
-# Markdown emoji test: Tags (subdivision flags)
+# Markdown emoji presentation test: Tags (subdivision flags)
 
 | Sequence | Output | Name | Version |
 | - | - | - | - |

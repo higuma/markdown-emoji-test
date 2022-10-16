@@ -4,8 +4,8 @@ module MarkdownEmojiTest
   module Generator
     module Modifiers
       TITLE = {
-        :en => 'Markdown emoji test: Modifiers',
-        :ja => 'Markdown絵文字テスト: 修飾子'
+        :en => 'Markdown emoji presentation test: Modifiers',
+        :ja => 'Markdown絵文字表示テスト: 修飾子'
       }
       HEADER = {
         :en => '| Sequence | Output | Name | Version |',

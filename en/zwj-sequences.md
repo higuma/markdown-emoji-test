@@ -1,4 +1,4 @@
-# Markdown emoji test: Zero width joiner sequences
+# Markdown emoji presentation test: Zero width joiner sequences
 
 ## Family
 

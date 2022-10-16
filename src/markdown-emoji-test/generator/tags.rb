@@ -4,8 +4,8 @@ module MarkdownEmojiTest
   module Generator
     module Tags
       TITLE = {
-        :en => 'Markdown emoji test: Tags (subdivision flags)',
-        :ja => 'Markdown絵文字テスト: タグ(国・地域内部の旗)'
+        :en => 'Markdown emoji presentation test: Tags (subdivision flags)',
+        :ja => 'Markdown絵文字表示テスト: タグ(国・地域内部の旗)'
       }
       HEADER = {
         :en => '| Sequence | Output | Name | Version |',

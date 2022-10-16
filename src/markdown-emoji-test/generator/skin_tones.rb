@@ -4,8 +4,8 @@ module MarkdownEmojiTest
   module Generator
     module SkinTones
       TITLE = {
-        :en => 'Markdown emoji test: Skin tones',
-        :ja => 'Markdown絵文字テスト: 肌の色',
+        :en => 'Markdown emoji presentation test: Skin tones',
+        :ja => 'Markdown絵文字表示テスト: 肌の色',
       }
       HEADER = {
         :en => '| Code | None | 1-2 | 3 | 4 | 5 | 6 | Name | Version |',

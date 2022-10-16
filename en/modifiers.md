@@ -1,4 +1,4 @@
-# Markdown emoji test: Modifiers
+# Markdown emoji presentation test: Modifiers
 
 | Sequence | Output | Name | Version |
 | - | - | - | - |
