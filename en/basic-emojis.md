@@ -1,4 +1,4 @@
-# Markdown emoji presentation test: Basic (stand-alone) emojis
+# Markdown emoji presentation test: Stand-alone emojis
 
 `c`: as code span, &nbsp; **c**: character only, &nbsp; **15**: character + VS15(U+FE0E), &nbsp; **16**: character + VS16(U+FE0F)
 

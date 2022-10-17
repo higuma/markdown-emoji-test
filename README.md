@@ -6,17 +6,17 @@ English | [Japanese](README.ja.md)
 
 Unicode standard has various emoji representation methods as follows.
 
-* Basic (stand-alone) emojis
+* Stand-alone emojis
 * Keycaps
 * Flags
 * Modifiers (skin tones)
 * Zero width joiner sequences
 
-They are defined in [Unicode® Technical Standard #51](https://unicode.org/reports/tr51/). However, most presentation environments do not supports these specs strictly. Some of them support partially, or others have extra features which are not present in Unicode standard.
+They are defined in [Unicode® Technical Standard #51](https://unicode.org/reports/tr51/). However, most presentation environments do not support these specs strictly. Some of them support partially, or others have extra features which are not present in the Unicode standard.
 
 ### Test data
 
-Unicode privides presentation test documents for emojis. You can open these documents with browsers or text editors, and check how they display emoji characters and sequences.
+Unicode provides presentation test documents for emojis. You can open these documents with browsers or text editors, and check how they display emoji characters and sequences.
 
 * HTML: https://www.unicode.org/emoji/charts/emoji-style.html
     * [Characters which should be displayed as text (using VS15)](https://www.unicode.org/emoji/charts/emoji-style.html#text+ts_plain)
@@ -30,13 +30,13 @@ Unicode privides presentation test documents for emojis. You can open these docu
 
 ### Motivation
 
-Markdown has been widely used for documentation recently. But Unicode does not provide any presentation documetns for Markdown.
+Markdown has been widely used for documentation recently. But Unicode does not provide any presentation documents for Markdown.
 
 Unicode emoji presentation test documents for Markdown are made as follows.
 
-## [Basic (stand-alone) emojis](en/basic-emojis.md)
+## [Stand-alone emojis](en/basic-emojis.md)
 
-There are two types for Unicode stand-alone emoji presentations.
+There are two types of Unicode stand-alone emoji presentations.
 
 * Emoji-only characters (e.g. U+1F9F2 → &#x1F9F2;)
 * Characters which have both text and emoji presentations (e.g. U+2601 → &#x2601;&#xFE0E;, &#x2601;&#xFE0F;)
@@ -45,7 +45,7 @@ When characters have both text and emoji presentations, VS15(U+FE0E) or VS16(U+F
 
 https://en.wikipedia.org/wiki/Variation_Selectors_(Unicode_block)
 
-Presentations are specified with VS15(text) or VS16(emoji) after the target character. They are just ignored if used for characters which has only one presentation. See the example below. U+0041 is text-only. U+1F9F2 is emoji-only. U+00A9 and U+2601 have both presentations.
+Presentations are specified with VS15 (text) or VS16 (emoji) after the target character. They are just ignored if used for characters which have only one presentation. See the example below. U+0041 is text-only. U+1F9F2 is emoji-only. U+00A9 and U+2601 have both presentations.
 
 | Character | Default| with VS15 | with VS16 |
 | :-: | :-: | :-: | :-: |
@@ -54,11 +54,11 @@ Presentations are specified with VS15(text) or VS16(emoji) after the target char
 | U+2601 | `&#x2601;`<br>&#x2601; | `&#x2601;&#xFE0E;`<br>&#x2601;&#xFE0E; | `&#x2601;&#xFE0F;`<br>&#x2601;&#xFE0F; |
 | U+1F9F2 | `&#x1F9F2;`<br>&#x1F9F2; | `&#x1F9F2;&#xFE0E;`<br>&#x1F9F2;&#xFE0E; | `&#x1F9F2;&#xFE0F;`<br>&#x1F9F2;&#xFE0F; |
 
-If VS15/16 is not specified with characters which has both presentations, the results depand on platform. See the full listings at the following link.
+If VS15/16 is not specified with characters which have both presentations, the results depend on the platform. See the full listings at the following link.
 
-→ [Basic (stand-alone) emojis](en/basic-emojis.md)
+→ [Stand-alone emojis](en/basic-emojis.md)
 
-All Unicode characters which have stand-alone emoji presentations are listed in the table. Each cell has following four lines.
+All Unicode characters which have stand-alone emoji presentations are listed in the table. Each cell has four lines as follows.
 
 * character inside a code span
 * default (no VS15/16)
@@ -71,17 +71,17 @@ It also popups a character code, name, and Unicode version on hovering a mouse c
 
 ## [Keycaps](en/keycaps.md)
 
-Emojis for telephone push buttons are defined as key + VS16(U+FE0F) + KEYCAP(U+20E3) sequences.
+Emojis for telephone push buttons are defined as key + VS16 (U+FE0F) + KEYCAP (U+20E3) sequences.
 
 → [Keycaps](en/keycaps.md)
 
 ## [Flags](en/flags.md)
 
-In Unicode, country flags are represented with two [regional indicator symbols](https://en.wikipedia.org/wiki/Regional_indicator_symbol).
+In Unicode, country flags are represented by two [regional indicator symbols](https://en.wikipedia.org/wiki/Regional_indicator_symbol).
 
 → [Flags](en/flags.md)
 
-> They are intended to display each country flags. But most environments just display small two alphabets.
+> They are intended to display each country flag. But most environments just display small two alphabets.
 > 
 > https://www.unicode.org/emoji/charts/emoji-style.html#emoji_reg/tags_plain
 
@@ -119,11 +119,11 @@ Examples:
 | 5 | 👍&#x1F3FE; | 🦶&#x1F3FE; | 🧑&#x1F3FE; |
 | 6 | 👍&#x1F3FF; | 🦶&#x1F3FF; | 🧑&#x1F3FF; |
 
-All possible sequences using ZWJ and their presentation samples are listed at the following link.
+All possible sequences and their presentation samples are listed at the following link.
 
 → [Modifiers](en/modifiers.md)
 
-See skin tone gradations for each characters at the following link.
+See skin tone gradations for each character at the following link.
 
 → [Skin tones](en/skin-tones.md)
 

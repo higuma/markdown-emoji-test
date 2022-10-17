@@ -7,8 +7,8 @@ module MarkdownEmojiTest
       VS16 = ?\uFE0F
 
       TITLE = {
-        :en => 'Markdown emoji presentation test: Basic (stand-alone) emojis',
-        :ja => 'Markdown絵文字表示テスト: 基本(単独)絵文字',
+        :en => 'Markdown emoji presentation test: Stand-alone emojis',
+        :ja => 'Markdown絵文字表示テスト: 単独絵文字',
       }
       EXAMPLE = {
         :en => "`c`: as code span, &nbsp; **c**: character only, &nbsp; **15**: character + VS15(U+FE0E), &nbsp; **16**: character + VS16(U+FE0F)",
