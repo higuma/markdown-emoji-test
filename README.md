@@ -7,6 +7,16 @@ README →
 
 ----------------------------------------
 
+* [Introduction](#introduction)
+* [Stand-alone emojis](#stand-alone-emojis)
+* [Keycaps](#keycaps)
+* [Flags](#flags)
+* [Tags (subdivision flags)](#tags-subdivision-flags)
+* [Modifiers (Skin tones)](#modifiers-skin-tones)
+* [Zero width joiner sequences](#zero-width-joiner-sequences)
+* [Generating listings](#generating-listings)
+* [References](#references)
+
 ## Introduction
 
 Unicode standard has various emoji representation methods as follows.
