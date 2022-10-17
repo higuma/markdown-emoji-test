@@ -2,7 +2,7 @@
 
 English | [Japanese](../ja/skin-tones.md)
 
-[Modifiers](modifiers.md) ← [README](../README.md) → [Zero width joiner sequences](zwj-sequences.md)
+[Modifiers](modifiers.md) ← [README](../README.md#modifiers-skin-tones) → [Zero width joiner sequences](zwj-sequences.md)
 
 ----------------------------------------
 
@@ -140,4 +140,4 @@ English | [Japanese](../ja/skin-tones.md)
 
 ----------------------------------------
 
-[Modifiers](modifiers.md) ← [README](../README.md) → [Zero width joiner sequences](zwj-sequences.md)
+[Modifiers](modifiers.md) ← [README](../README.md#modifiers-skin-tones) → [Zero width joiner sequences](zwj-sequences.md)

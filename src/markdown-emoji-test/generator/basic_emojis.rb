@@ -16,8 +16,8 @@ module MarkdownEmojiTest
         ja: "日本語 | [English](../en/#{BASENAME})",
       }
       NAVIGATION = {
-        en: '[README](../README.md) → [Keycaps](keycaps.md)',
-        ja: '[README](../README.ja.md) → [文字キー](keycaps.md)',
+        en: '[README](../README.md#stand-alone-emojis) → [Keycaps](keycaps.md)',
+        ja: '[解説](../README.ja.md#単独絵文字) → [文字キー](keycaps.md)',
       }
       SEPARATOR = '-' * 40
       EXAMPLE = {

@@ -13,8 +13,8 @@ module MarkdownEmojiTest
         ja: "日本語 | [English](../en/#{BASENAME})",
       }
       NAVIGATION = {
-        en: '[Keycaps](keycaps.md) ← [README](../README.md) → [Tags(subdivision flags)](tags.md)',
-        ja: '[文字キー](keycaps.md) ← [README](../README.ja.md) → [タグ(地域旗)](tags.md)',
+        en: '[Keycaps](keycaps.md) ← [README](../README.md#flags) → [Tags(subdivision flags)](tags.md)',
+        ja: '[文字キー](keycaps.md) ← [解説](../README.ja.md#国旗) → [タグ(地域旗)](tags.md)',
       }
       SEPARATOR = '-' * 40
       HEADER = {

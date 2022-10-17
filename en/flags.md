@@ -2,7 +2,7 @@
 
 English | [Japanese](../ja/flags.md)
 
-[Keycaps](keycaps.md) ← [README](../README.md) → [Tags(subdivision flags)](tags.md)
+[Keycaps](keycaps.md) ← [README](../README.md#flags) → [Tags(subdivision flags)](tags.md)
 
 ----------------------------------------
 
@@ -269,4 +269,4 @@ English | [Japanese](../ja/flags.md)
 
 ----------------------------------------
 
-[Keycaps](keycaps.md) ← [README](../README.md) → [Tags(subdivision flags)](tags.md)
+[Keycaps](keycaps.md) ← [README](../README.md#flags) → [Tags(subdivision flags)](tags.md)

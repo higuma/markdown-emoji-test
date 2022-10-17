@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/basic-emojis.md)
 
-[README](../README.ja.md) → [文字キー](keycaps.md)
+[解説](../README.ja.md#単独絵文字) → [文字キー](keycaps.md)
 
 ----------------------------------------
 
@@ -159,4 +159,4 @@
 
 ----------------------------------------
 
-[README](../README.ja.md) → [文字キー](keycaps.md)
+[解説](../README.ja.md#単独絵文字) → [文字キー](keycaps.md)

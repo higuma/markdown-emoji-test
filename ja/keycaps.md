@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/keycaps.md)
 
-[単独絵文字](basic-emojis.md) ← [README](../README.ja.md) → [国旗](flags.md)
+[単独絵文字](basic-emojis.md) ← [解説](../README.ja.md#文字キー) → [国旗](flags.md)
 
 ----------------------------------------
 
@@ -23,4 +23,4 @@
 
 ----------------------------------------
 
-[単独絵文字](basic-emojis.md) ← [README](../README.ja.md) → [国旗](flags.md)
+[単独絵文字](basic-emojis.md) ← [解説](../README.ja.md#文字キー) → [国旗](flags.md)

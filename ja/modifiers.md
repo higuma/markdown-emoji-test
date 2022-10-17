@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/modifiers.md)
 
-[タグ(地域旗)](tags.md) ← [README](../README.ja.md) → [肌の色](skin-tones.md)
+[タグ(地域旗)](tags.md) ← [解説](../README.ja.md#修飾子肌の色) → [肌の色](skin-tones.md)
 
 ----------------------------------------
 
@@ -656,4 +656,4 @@
 
 ----------------------------------------
 
-[タグ(地域旗)](tags.md) ← [README](../README.ja.md) → [肌の色](skin-tones.md)
+[タグ(地域旗)](tags.md) ← [解説](../README.ja.md#修飾子肌の色) → [肌の色](skin-tones.md)

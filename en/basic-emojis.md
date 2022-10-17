@@ -2,7 +2,7 @@
 
 English | [Japanese](../ja/basic-emojis.md)
 
-[README](../README.md) → [Keycaps](keycaps.md)
+[README](../README.md#stand-alone-emojis) → [Keycaps](keycaps.md)
 
 ----------------------------------------
 
@@ -159,4 +159,4 @@ English | [Japanese](../ja/basic-emojis.md)
 
 ----------------------------------------
 
-[README](../README.md) → [Keycaps](keycaps.md)
+[README](../README.md#stand-alone-emojis) → [Keycaps](keycaps.md)

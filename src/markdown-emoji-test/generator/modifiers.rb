@@ -13,8 +13,8 @@ module MarkdownEmojiTest
         ja: "日本語 | [English](../en/#{BASENAME})",
       }
       NAVIGATION = {
-        en: '[Tags (subdivision flags)](tags.md) ← [README](../README.md) → [Skin tones](skin-tones.md)',
-        ja: '[タグ(地域旗)](tags.md) ← [README](../README.ja.md) → [肌の色](skin-tones.md)',
+        en: '[Tags (subdivision flags)](tags.md) ← [README](../README.md#modifiers-skin-tones) → [Skin tones](skin-tones.md)',
+        ja: '[タグ(地域旗)](tags.md) ← [解説](../README.ja.md#修飾子肌の色) → [肌の色](skin-tones.md)',
       }
       SEPARATOR = '-' * 40
       HEADER = {

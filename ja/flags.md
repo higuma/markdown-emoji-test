@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/flags.md)
 
-[文字キー](keycaps.md) ← [README](../README.ja.md) → [タグ(地域旗)](tags.md)
+[文字キー](keycaps.md) ← [解説](../README.ja.md#国旗) → [タグ(地域旗)](tags.md)
 
 ----------------------------------------
 
@@ -269,4 +269,4 @@
 
 ----------------------------------------
 
-[文字キー](keycaps.md) ← [README](../README.ja.md) → [タグ(地域旗)](tags.md)
+[文字キー](keycaps.md) ← [解説](../README.ja.md#国旗) → [タグ(地域旗)](tags.md)

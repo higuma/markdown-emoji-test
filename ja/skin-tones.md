@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/skin-tones.md)
 
-[修飾子](modifiers.md) ← [README](../README.ja.md) → [ゼロ幅接合子シーケンス](zwj-sequences.md)
+[修飾子](modifiers.md) ← [解説](../README.ja.md#修飾子肌の色) → [ゼロ幅接合子シーケンス](zwj-sequences.md)
 
 ----------------------------------------
 
@@ -140,4 +140,4 @@
 
 ----------------------------------------
 
-[修飾子](modifiers.md) ← [README](../README.ja.md) → [ゼロ幅接合子シーケンス](zwj-sequences.md)
+[修飾子](modifiers.md) ← [解説](../README.ja.md#修飾子肌の色) → [ゼロ幅接合子シーケンス](zwj-sequences.md)

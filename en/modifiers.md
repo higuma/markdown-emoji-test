@@ -2,7 +2,7 @@
 
 English | [Japanese](../ja/modifiers.md)
 
-[Tags (subdivision flags)](tags.md) ← [README](../README.md) → [Skin tones](skin-tones.md)
+[Tags (subdivision flags)](tags.md) ← [README](../README.md#modifiers-skin-tones) → [Skin tones](skin-tones.md)
 
 ----------------------------------------
 
@@ -656,4 +656,4 @@ English | [Japanese](../ja/modifiers.md)
 
 ----------------------------------------
 
-[Tags (subdivision flags)](tags.md) ← [README](../README.md) → [Skin tones](skin-tones.md)
+[Tags (subdivision flags)](tags.md) ← [README](../README.md#modifiers-skin-tones) → [Skin tones](skin-tones.md)

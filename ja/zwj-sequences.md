@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/zwj-sequences.md)
 
-[肌の色](skin-tones.md) ← [README](../README.ja.md)
+[肌の色](skin-tones.md) ← [解説](../README.ja.md#ゼロ幅接合子シーケンス)
 
 ----------------------------------------
 
@@ -1382,4 +1382,4 @@
 
 ----------------------------------------
 
-[肌の色](skin-tones.md) ← [README](../README.ja.md)
+[肌の色](skin-tones.md) ← [解説](../README.ja.md#ゼロ幅接合子シーケンス)

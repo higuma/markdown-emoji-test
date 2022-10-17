@@ -13,8 +13,8 @@ module MarkdownEmojiTest
         ja: "日本語 | [English](../en/#{BASENAME})",
       }
       NAVIGATION = {
-        en: '[Modifiers](modifiers.md) ← [README](../README.md) → [Zero width joiner sequences](zwj-sequences.md)',
-        ja: '[修飾子](modifiers.md) ← [README](../README.ja.md) → [ゼロ幅接合子シーケンス](zwj-sequences.md)',
+        en: '[Modifiers](modifiers.md) ← [README](../README.md#modifiers-skin-tones) → [Zero width joiner sequences](zwj-sequences.md)',
+        ja: '[修飾子](modifiers.md) ← [解説](../README.ja.md#修飾子肌の色) → [ゼロ幅接合子シーケンス](zwj-sequences.md)',
       }
       SEPARATOR = '-' * 40
       HEADER = {

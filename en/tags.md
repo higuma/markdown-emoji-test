@@ -2,7 +2,7 @@
 
 English | [Japanese](../ja/tags.md)
 
-[Flags](flags.md) ← [README](../README.md) → [Modifiers](modifiers.md)
+[Flags](flags.md) ← [README](../README.md#tags-subdivision-flags) → [Modifiers](modifiers.md)
 
 ----------------------------------------
 
@@ -14,4 +14,4 @@ English | [Japanese](../ja/tags.md)
 
 ----------------------------------------
 
-[Flags](flags.md) ← [README](../README.md) → [Modifiers](modifiers.md)
+[Flags](flags.md) ← [README](../README.md#tags-subdivision-flags) → [Modifiers](modifiers.md)

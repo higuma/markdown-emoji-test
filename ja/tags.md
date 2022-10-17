@@ -2,7 +2,7 @@
 
 日本語 | [English](../en/tags.md)
 
-[国旗](flags.md) ← [README](../README.ja.md) → [修飾子](modifiers.md)
+[国旗](flags.md) ← [解説](../README.ja.md#タグ地域旗) → [修飾子](modifiers.md)
 
 ----------------------------------------
 
@@ -14,4 +14,4 @@
 
 ----------------------------------------
 
-[国旗](flags.md) ← [README](../README.ja.md) → [修飾子](modifiers.md)
+[国旗](flags.md) ← [解説](../README.ja.md#タグ地域旗) → [修飾子](modifiers.md)
