@@ -6,13 +6,23 @@ module MarkdownEmojiTest
       VS15 = ?\uFE0E
       VS16 = ?\uFE0F
 
+      BASENAME = "basic-emojis.md"
       TITLE = {
-        :en => 'Markdown emoji presentation test: Stand-alone emojis',
-        :ja => 'Markdown絵文字表示テスト: 単独絵文字',
+        en: 'Markdown emoji presentation test: Stand-alone emojis',
+        ja: 'Markdown絵文字表示テスト: 単独絵文字',
       }
+      LANG = {
+        en: "English | [Japanese](../ja/#{BASENAME})",
+        ja: "日本語 | [English](../en/#{BASENAME})",
+      }
+      NAVIGATION = {
+        en: '[README](../README.md) → [Keycaps](keycaps.md)',
+        ja: '[README](../README.ja.md) → [文字キー](keycaps.md)',
+      }
+      SEPARATOR = '-' * 40
       EXAMPLE = {
-        :en => "`c`: as code span, &nbsp; **c**: character only, &nbsp; **15**: character + VS15(U+FE0E), &nbsp; **16**: character + VS16(U+FE0F)",
-        :ja => "`c`: コードスパン表示, &nbsp; **c**: 文字のみ, &nbsp; **15**: 文字 + VS15(U+FE0E), &nbsp; **16**: 文字 + VS16(U+FE0F)",
+        en: '`c`: as code span, &nbsp; **c**: character only, &nbsp; **15**: character + VS15(U+FE0E), &nbsp; **16**: character + VS16(U+FE0F)',
+        ja: '`c`: コードスパン表示, &nbsp; **c**: 文字のみ, &nbsp; **15**: 文字 + VS15(U+FE0E), &nbsp; **16**: 文字 + VS16(U+FE0F)',
       }
 
       @@emoji_map = Unicode::Emoji::Data::Map.new
@@ -20,6 +30,12 @@ module MarkdownEmojiTest
       module_function
       def generate(f, lang)
         f.puts "# #{TITLE[lang]}"
+        f.puts
+        f.puts LANG[lang]
+        f.puts
+        f.puts NAVIGATION[lang]
+        f.puts
+        f.puts SEPARATOR
         f.puts
         f.puts EXAMPLE[lang]
         f.puts
@@ -38,6 +54,10 @@ module MarkdownEmojiTest
           items[code] = true
         end
         generate_line f, base, items
+        f.puts
+        f.puts SEPARATOR
+        f.puts
+        f.puts NAVIGATION[lang]
       end
 
       def generate_line(f, base, items)
@@ -58,8 +78,8 @@ module MarkdownEmojiTest
         f.puts
       end
 
-      def output_file(path, lang)
-        open(path, 'w') do |f|
+      def output_file(root_dir, lang)
+        open("#{root_dir}/#{lang}/#{BASENAME}", 'w') do |f|
           generate f, lang
         end
       end

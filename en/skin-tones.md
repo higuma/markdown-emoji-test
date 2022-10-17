@@ -1,5 +1,11 @@
 # Markdown emoji presentation test: Skin tones
 
+English | [Japanese](../ja/skin-tones.md)
+
+[Modifiers](modifiers.md) ← [README](../README.md) → [Zero width joiner sequences](zwj-sequences.md)
+
+----------------------------------------
+
 | Code | None | 1-2 | 3 | 4 | 5 | 6 | Name | Version |
 | - | - | - | - | - | - | - | - | - |
 | 261D | ☝ | ☝🏻 | ☝🏼 | ☝🏽 | ☝🏾 | ☝🏿 | index pointing up | E1.0 |
@@ -131,3 +137,7 @@
 | 1FAF4 | 🫴 | 🫴🏻 | 🫴🏼 | 🫴🏽 | 🫴🏾 | 🫴🏿 | palm up hand | E14.0 |
 | 1FAF5 | 🫵 | 🫵🏻 | 🫵🏼 | 🫵🏽 | 🫵🏾 | 🫵🏿 | index pointing at the viewer | E14.0 |
 | 1FAF6 | 🫶 | 🫶🏻 | 🫶🏼 | 🫶🏽 | 🫶🏾 | 🫶🏿 | heart hands | E14.0 |
+
+----------------------------------------
+
+[Modifiers](modifiers.md) ← [README](../README.md) → [Zero width joiner sequences](zwj-sequences.md)

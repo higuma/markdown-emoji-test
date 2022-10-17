@@ -2,6 +2,11 @@
 
 English | [Japanese](README.ja.md)
 
+README →
+[Stand-alone emojis](en/basic-emojis.md)
+
+----------------------------------------
+
 ## Introduction
 
 Unicode standard has various emoji representation methods as follows.
@@ -82,8 +87,6 @@ In Unicode, country flags are represented by two [regional indicator symbols](ht
 → [Flags](en/flags.md)
 
 > They are intended to display each country flag. But most environments just display small two alphabets.
-> 
-> https://www.unicode.org/emoji/charts/emoji-style.html#emoji_reg/tags_plain
 
 ## [Tags (subdivision flags)](en/tags.md)
 
@@ -149,6 +152,11 @@ $ ruby generate-all.rb
 Unicode® Emoji: https://unicode.org/emoji/techindex.html
 
 Unicode® Technical Standard #51: https://unicode.org/reports/tr51/
+
+----------------------------------------
+
+README →
+[Stand-alone emojis](en/basic-emojis.md)
 
 [emoji-sequences.txt]: https://www.unicode.org/Public/emoji/latest/emoji-sequences.txt
 [emoji-zwj-sequences.txt]: https://www.unicode.org/Public/emoji/latest/emoji-zwj-sequences.txt

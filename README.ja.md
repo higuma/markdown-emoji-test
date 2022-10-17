@@ -1,6 +1,11 @@
 # Markdown絵文字表示テスト
 
-[English](README.md) | 日本語
+日本語 | [English](README.md)
+
+README →
+[単独絵文字](ja/basic-emojis.md)
+
+----------------------------------------
 
 ## はじめに
 
@@ -77,23 +82,23 @@ UnicodeにはCOMBINING ENCLOSING KEYCAP(U+20E3&emsp;&#x20E3;)という[結合文
 
 → [文字キー](ja/keycaps.md)
 
-## [国旗・地域旗](ja/flags.md)
+## [国旗](ja/flags.md)
 
-Unicode絵文字では国や地域の旗はREGIONAL INDICATOR SYMBOL LETTER(U+1F1E6..U+1F1FF) 2文字の組み合わせで表現する。
+Unicode絵文字では国旗はREGIONAL INDICATOR SYMBOL LETTER(U+1F1E6..U+1F1FF) 2文字の組み合わせで表現する。
 
-→ [国旗・地域旗](ja/flags.md)
+→ [国旗](ja/flags.md)
 
 > 多くの表示環境では各国の国旗ではなく、小さめのアルファベット2文字をそのまま表示する。
 
-## [タグ(国・地域内部の旗)](ja/tags.md)
+## [タグ(地域旗)](ja/tags.md)
 
-国や地域のさらに内部の区域を表す旗にはタグと呼ばれる専用文字によるシーケンスが用いられる。タグに関しては次の英語版Wikipediaが詳しい。
+国内地域を表す旗にはタグと呼ばれる専用文字によるシーケンスが用いられる。タグに関しては次の英語版Wikipediaが詳しい。
 
 https://en.wikipedia.org/wiki/Tags_(Unicode_block)
 
 元々は言語の種類を表すために作られたものだが、現在は絵文字に転用されており、イギリス国内の地方の旗を表現する目的にのみ用いられている。
 
-→ [タグ(国・地域内部の旗)](ja/tags.md)
+→ [タグ(地域旗)](ja/tags.md)
 
 ## [修飾子](ja/modifiers.md)\([肌の色](ja/skin-tones.md)\)
 
@@ -147,6 +152,11 @@ $ ruby generate-all.rb
 Unicode® Emoji: https://unicode.org/emoji/techindex.html
 
 Unicode® Technical Standard #51: https://unicode.org/reports/tr51/
+
+----------------------------------------
+
+README →
+[単独絵文字](ja/basic-emojis.md)
 
 [emoji-sequences.txt]: https://www.unicode.org/Public/emoji/latest/emoji-sequences.txt
 [emoji-zwj-sequences.txt]: https://www.unicode.org/Public/emoji/latest/emoji-zwj-sequences.txt

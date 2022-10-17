@@ -1,5 +1,11 @@
 # Markdown絵文字表示テスト: 修飾子
 
+日本語 | [English](../en/modifiers.md)
+
+[タグ(地域旗)](tags.md) ← [README](../README.ja.md) → [肌の色](skin-tones.md)
+
+----------------------------------------
+
 | シーケンス | 出力 | 名前 | バージョン |
 | - | - | - | - |
 | 261D 1F3FB | ☝🏻 | index pointing up: light skin tone | E1.0 |
@@ -647,3 +653,7 @@
 | 1FAF6 1F3FD | 🫶🏽 | heart hands: medium skin tone | E14.0 |
 | 1FAF6 1F3FE | 🫶🏾 | heart hands: medium-dark skin tone | E14.0 |
 | 1FAF6 1F3FF | 🫶🏿 | heart hands: dark skin tone | E14.0 |
+
+----------------------------------------
+
+[タグ(地域旗)](tags.md) ← [README](../README.ja.md) → [肌の色](skin-tones.md)

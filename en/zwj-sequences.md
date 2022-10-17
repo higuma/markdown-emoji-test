@@ -1,5 +1,11 @@
 # Markdown emoji presentation test: Zero width joiner sequences
 
+English | [Japanese](../ja/zwj-sequences.md)
+
+[Skin tones](skin-tones.md) ← [README](../README.md)
+
+----------------------------------------
+
 ## Family
 
 | Sequence | Output | Name | Version |
@@ -1373,3 +1379,7 @@
 | 1F635 200D 1F4AB | 😵‍💫 | face with spiral eyes | E13.1 |
 | 1F636 200D 1F32B FE0F | 😶‍🌫️ | face in clouds | E13.1 |
 | 1F9D1 200D 1F384 | 🧑‍🎄 | mx claus | E13.0 |
+
+----------------------------------------
+
+[Skin tones](skin-tones.md) ← [README](../README.md)

@@ -1,5 +1,11 @@
 # Markdown emoji presentation test: Flags
 
+English | [Japanese](../ja/flags.md)
+
+[Keycaps](keycaps.md) ← [README](../README.md) → [Tags(subdivision flags)](tags.md)
+
+----------------------------------------
+
 | Sequence | Output | Name | Version |
 | - | - | - | - |
 | 1F1E6 1F1E8 | 🇦🇨 | flag: Ascension Island | E2.0 |
@@ -260,3 +266,7 @@
 | 1F1FF 1F1E6 | 🇿🇦 | flag: South Africa | E2.0 |
 | 1F1FF 1F1F2 | 🇿🇲 | flag: Zambia | E2.0 |
 | 1F1FF 1F1FC | 🇿🇼 | flag: Zimbabwe | E2.0 |
+
+----------------------------------------
+
+[Keycaps](keycaps.md) ← [README](../README.md) → [Tags(subdivision flags)](tags.md)

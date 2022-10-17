@@ -1,5 +1,11 @@
 # Markdown emoji prsentation test: Keycaps
 
+English | [Japanese](../ja/keycaps.md)
+
+[Stand-alone emojis](basic-emojis.md) ← [README](../README.md) → [Flags](flags.md)
+
+----------------------------------------
+
 | Sequence | Output | Name | Version |
 | - | - | - | - |
 | 0023 20E3<br>0023 FE0E 20E3<br>0023 FE0F 20E3 | #⃣<br>#︎⃣<br>#️⃣ | keycap: # | E0.6 |
@@ -14,3 +20,7 @@
 | 0037 20E3<br>0037 FE0E 20E3<br>0037 FE0F 20E3 | 7⃣<br>7︎⃣<br>7️⃣ | keycap: 7 | E0.6 |
 | 0038 20E3<br>0038 FE0E 20E3<br>0038 FE0F 20E3 | 8⃣<br>8︎⃣<br>8️⃣ | keycap: 8 | E0.6 |
 | 0039 20E3<br>0039 FE0E 20E3<br>0039 FE0F 20E3 | 9⃣<br>9︎⃣<br>9️⃣ | keycap: 9 | E0.6 |
+
+----------------------------------------
+
+[Stand-alone emojis](basic-emojis.md) ← [README](../README.md) → [Flags](flags.md)

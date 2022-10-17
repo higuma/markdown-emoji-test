@@ -1,5 +1,11 @@
 # Markdown絵文字表示テスト: 文字キー
 
+日本語 | [English](../en/keycaps.md)
+
+[単独絵文字](basic-emojis.md) ← [README](../README.ja.md) → [国旗](flags.md)
+
+----------------------------------------
+
 | シーケンス | 出力 | 名前 | バージョン |
 | - | - | - | - |
 | 0023 20E3<br>0023 FE0E 20E3<br>0023 FE0F 20E3 | #⃣<br>#︎⃣<br>#️⃣ | keycap: # | E0.6 |
@@ -14,3 +20,7 @@
 | 0037 20E3<br>0037 FE0E 20E3<br>0037 FE0F 20E3 | 7⃣<br>7︎⃣<br>7️⃣ | keycap: 7 | E0.6 |
 | 0038 20E3<br>0038 FE0E 20E3<br>0038 FE0F 20E3 | 8⃣<br>8︎⃣<br>8️⃣ | keycap: 8 | E0.6 |
 | 0039 20E3<br>0039 FE0E 20E3<br>0039 FE0F 20E3 | 9⃣<br>9︎⃣<br>9️⃣ | keycap: 9 | E0.6 |
+
+----------------------------------------
+
+[単独絵文字](basic-emojis.md) ← [README](../README.ja.md) → [国旗](flags.md)

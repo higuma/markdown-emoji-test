@@ -1,5 +1,11 @@
 # Markdown emoji presentation test: Modifiers
 
+English | [Japanese](../ja/modifiers.md)
+
+[Tags (subdivision flags)](tags.md) ← [README](../README.md) → [Skin tones](skin-tones.md)
+
+----------------------------------------
+
 | Sequence | Output | Name | Version |
 | - | - | - | - |
 | 261D 1F3FB | ☝🏻 | index pointing up: light skin tone | E1.0 |
@@ -647,3 +653,7 @@
 | 1FAF6 1F3FD | 🫶🏽 | heart hands: medium skin tone | E14.0 |
 | 1FAF6 1F3FE | 🫶🏾 | heart hands: medium-dark skin tone | E14.0 |
 | 1FAF6 1F3FF | 🫶🏿 | heart hands: dark skin tone | E14.0 |
+
+----------------------------------------
+
+[Tags (subdivision flags)](tags.md) ← [README](../README.md) → [Skin tones](skin-tones.md)
