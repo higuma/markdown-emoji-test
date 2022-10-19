@@ -80,7 +80,7 @@ All Unicode characters which have stand-alone emoji presentations are listed in 
 * as text (with VS15)
 * as emoji (with VS16)
 
-It also popups a character code, name, and Unicode version on hovering a mouse cursor on a character.
+It also popups a character code, name, and version on hovering a mouse cursor on a character.
 
 > GitHub Markdown implementation is basically emoji-first. For example, according to the Unicode standard, U+2194`↔` should be displayed as text as default. But GitHub displays as emoji. Also, VS15 does not work with U+26BD`⚽`. It only displays as text inside a code span.
 
