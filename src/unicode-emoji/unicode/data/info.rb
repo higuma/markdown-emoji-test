@@ -29,12 +29,12 @@ module Unicode
         @@map.canonical_combining_class @code
       end
 
-      def bidirectional_category
-        @@map.bidirectional_category @code
+      def bidi_class
+        @@map.bidi_class @code
       end
 
-      def character_decomposition_mapping
-        @@map.character_decomposition_mapping @code
+      def decomposition_mapping
+        @@map.decomposition_mapping @code
       end
 
       def decimal_digit_value
@@ -53,12 +53,12 @@ module Unicode
         @@map.mirrored @code
       end
 
-      def unicode_1_0_name
-        @@map.unicode_1_0_name @code
+      def unicode_1_name
+        @@map.unicode_1_name @code
       end
 
-      def iso10646_comment
-        @@map.iso10646_comment @code
+      def iso_comment
+        @@map.iso_comment @code
       end
 
       def uppercase_mapping

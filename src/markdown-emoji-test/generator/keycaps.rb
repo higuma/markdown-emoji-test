@@ -40,7 +40,10 @@ module MarkdownEmojiTest
           seqs = SUFFIXES.map {|suffix| [seq[0]] + suffix }
           f.puts "| #{
             seqs.map {|seq|
-              seq.map {|c| sprintf "%04X", c }.join(' ')
+              hex_seq = seq.map {|c| sprintf "%04X", c };
+              "<span id=\"#{hex_seq.join '-'}\">#{
+                hex_seq.join ' '
+              }</span>"
             }.join '<br>'
           } | #{
             seqs.map {|seq|

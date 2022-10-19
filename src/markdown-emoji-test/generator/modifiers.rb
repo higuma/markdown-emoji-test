@@ -36,7 +36,14 @@ module MarkdownEmojiTest
         f.puts '| - | - | - | - |'
         for item in Unicode::Emoji::Modifier::get_list
           seq, name, ver = item
-          f.puts "| #{seq.map {|c| sprintf "%04X", c }.join(' ') } | #{seq.map {|c| c.chr(Encoding::UTF_8) }.join('') } | #{name} | #{ver} |"
+          hex_seq = seq.map {|c| sprintf "%04X", c }
+          f.puts "| <span id=\"#{
+            hex_seq.join '-'
+          }\">#{
+            hex_seq.join ' '
+          }</span> | #{
+            seq.map {|c| c.chr(Encoding::UTF_8) }.join ''
+          } | #{name} | #{ver} |"
         end
         f.puts
         f.puts SEPARATOR

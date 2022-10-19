@@ -41,7 +41,8 @@ module MarkdownEmojiTest
           name =~ /^(.*):/
           name = $1
           chr = code.chr(Encoding::UTF_8)
-          f.puts "| #{sprintf "%04X", code} | #{chr} |" + MODIFIERS.map {|mod| " #{chr}#{mod} |" }.join('') + " #{name} | #{ver} |"
+          hex = sprintf "%04X", code
+          f.puts "| <span id=\"#{hex}\">#{hex}</span> |" + MODIFIERS.map {|mod| " #{chr}#{mod} |" }.join('') + " #{name} | #{ver} |"
         end
         f.puts
         f.puts SEPARATOR

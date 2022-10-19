@@ -62,7 +62,8 @@ module MarkdownEmojiTest
 
       def generate_line(f, base, items)
         return if items.empty?
-        f.print "| #{sprintf "%04X", base} |"
+        hex = sprintf "%03X", base/16
+        f.print "| <span id=\"U+#{hex}x\">#{hex}x</span> |"
         for i in 0..15
           code = base + i
           hex = sprintf "%04X", code
@@ -70,9 +71,9 @@ module MarkdownEmojiTest
             c = code.chr(Encoding::UTF_8)
             name = @@emoji_map.name code
             ver = @@emoji_map.version code
-            f.print " <span title=\"U+#{hex} #{name}, #{ver}\">`#{c}`</span><br><span title=\"#{hex}\">#{c}</span><br><span title=\"#{hex} FE0E\">#{c}#{VS15}</span><br><span title=\"#{hex} FE0F\">#{c}#{VS16}</span> |"
+            f.print " <span id=\"U+#{hex}\" title=\"U+#{hex} #{name}, #{ver}\">`#{c}`</span><br><span title=\"#{hex}\">#{c}</span><br><span title=\"#{hex} FE0E\">#{c}#{VS15}</span><br><span title=\"#{hex} FE0F\">#{c}#{VS16}</span> |"
           else
-            f.print " <span title=\"U+#{hex} (not an emoji)\">-</span> |"
+            f.print " <span id=\"U+{hex}\" title=\"U+#{hex} (not an emoji)\">-</span> |"
           end
         end
         f.puts

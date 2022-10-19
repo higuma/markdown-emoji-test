@@ -10,13 +10,26 @@ module Unicode
 
       @@chars = nil
       @@ranges = nil
+      @@codes = nil
 
       def initialize
-        self.initialize_chars unless @@chars && @@ranges
+        self.initialize_chars unless @@chars && @@ranges && @@codes
       end
 
-      def codes
-        @@chars.keys
+      def each_range
+        return self.to_enum(:each_range) unless block_given?
+        for range in @@codes
+          yield range.range, range.fields
+        end
+      end
+
+      def each_code
+        return self.to_enum(:each_code) unless block_given?
+        for range in @@codes
+          for code in range.range
+            yield code, range.fields
+          end
+        end
       end
 
       def exist?(code)
@@ -59,12 +72,12 @@ module Unicode
         fields ? fields[3] : nil
       end
 
-      def bidirectional_category(code)
+      def bidi_class(code)
         fields = self.fields code
         fields ? fields[4] : nil
       end
 
-      def character_decomposition_mapping(code)
+      def decomposition_mapping(code)
         fields = self.fields code
         fields ? fields[5] : nil
       end
@@ -89,12 +102,12 @@ module Unicode
         fields ? fields[9] : nil
       end
 
-      def unicode_1_0_name(code)
+      def unicode_1_name(code)
         fields = self.fields code
         fields ? fields[10] : nil
       end
 
-      def iso10646_comment(code)
+      def iso_comment(code)
         fields = self.fields code
         fields ? fields[11] : nil
       end
@@ -118,6 +131,7 @@ module Unicode
       def initialize_chars
         @@chars = {}
         @@ranges = []
+        @@codes = []
         first = nil
         block_name = nil
         for fields in Unicode::Data::get_cached
@@ -130,9 +144,12 @@ module Unicode
               raise RuntimeError.new "Unicode::Data::Map::initialize: block name unmatched: [U+#{sprintf "%04X", first}] <#{block_name}, First> <=> [U+#{sprintf "%04X", fields[0]}] <#{$1}, Last>"
             end
             fields[1] = "<#{block_name}>"
-            @@ranges << Range.new(first..fields[0], fields)
+            range = Range.new(first..fields[0], fields)
+            @@ranges << range
+            @@codes << range
           else
             @@chars[fields[0]] = fields
+            @@codes << Range.new(fields[0]..fields[0], fields)
           end
         end
       end
