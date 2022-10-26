@@ -21,6 +21,7 @@ module MarkdownEmojiTest
         en: '| Code | None | 1-2 | 3 | 4 | 5 | 6 | Name | Version |',
         ja: '| コード | なし | 1-2 | 3 | 4 | 5 | 6 | 名前 | バージョン |',
       }
+      VS16 = ?\uFE0F
       MODIFIERS = (0x1F3FB..0x1F3FF).map {|mod| mod.chr(Encoding::UTF_8) }
 
       module_function
@@ -42,7 +43,9 @@ module MarkdownEmojiTest
           name = $1
           chr = code.chr(Encoding::UTF_8)
           hex = sprintf "%04X", code
-          f.puts "| <span id=\"#{hex}\">#{hex}</span> |" + MODIFIERS.map {|mod| " #{chr}#{mod} |" }.join('') + " #{name} | #{ver} |"
+          f.puts "| <span id=\"#{hex}\">#{hex}</span> | #{chr}#{VS16} |" +
+                 MODIFIERS.map {|mod| " #{chr}#{mod} |" }.join('') +
+                 " #{name} | #{ver} |"
         end
         f.puts
         f.puts SEPARATOR
